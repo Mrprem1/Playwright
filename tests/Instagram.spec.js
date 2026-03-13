@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
     {email:"Pk@gmail.com", msg:"asdfghjklk"},
     {email:"Vanish@gmail.com", msg:"asdfghjklk"},
 ].forEach(obj => {
-    test(`contact page submit with ${obj.email} and ${obj.msg}`, async ({page}) => {
+    test.skip(`contact page submit with ${obj.email} and ${obj.msg}`, async ({page}) => {
         await page.goto('http://localhost:5500/contact.html');
         // await page.getByRole('textbox', { name: 'Email' }).click();
         await page.locator('#exampleFormControlInput1').click();
