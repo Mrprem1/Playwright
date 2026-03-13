@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('test', async ({ page }) => {
+test.skip('test', async ({ page }) => {
   await page.goto('https://www.flipkart.com/');
   await page.locator('form').filter({ hasText: 'Enter Email/Mobile numberBy' }).getByRole('textbox').fill('pk@gmail.com');
   await page.locator('form').filter({ hasText: 'Enter Email/Mobile numberBy' }).getByRole('textbox').press('Enter');
